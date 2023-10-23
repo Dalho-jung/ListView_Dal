@@ -8,6 +8,11 @@
     android:padding="20sp"
     tools:context=".MainActivity">
 
+    <ListView
+        android:id="@+id/studentListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
 
 </LinearLayout>

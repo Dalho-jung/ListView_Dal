@@ -2,6 +2,7 @@ package com.n2isys.listview_dal
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ListView
 import com.n2isys.listview_dal.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.n2isys.listview_dal"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.n2isys.listview_dal"
