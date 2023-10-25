@@ -3,6 +3,7 @@ package com.n2isys.listview_dal
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import android.widget.Toast
 import com.n2isys.listview_dal.adapters.StudentAdapter
 import com.n2isys.listview_dal.databinding.ActivityMainBinding
 import com.n2isys.listview_dal.datas.Student
@@ -30,6 +31,14 @@ class MainActivity : AppCompatActivity() {
         mAdpter = StudentAdapter(this, R.layout.student_list_item, mStudentList)
 
         viewBind.studentListView.adapter = mAdpter
+        
+        viewBind.studentListView.setOnItemClickListener { parent, view, position, id -> 
+            
+            val clickedStudent = mStudentList[position]
+
+            Toast.makeText(this, "${clickedStudent.name} 이 클릭됨", Toast.LENGTH_SHORT).show()
+            
+        }
 
     }
 }
