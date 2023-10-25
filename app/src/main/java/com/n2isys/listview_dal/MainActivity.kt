@@ -3,12 +3,15 @@ package com.n2isys.listview_dal
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import com.n2isys.listview_dal.adapters.StudentAdapter
 import com.n2isys.listview_dal.databinding.ActivityMainBinding
 import com.n2isys.listview_dal.datas.Student
 
 class MainActivity : AppCompatActivity() {
 
     val mStudentList = ArrayList<Student>()
+    lateinit var mAdpter : StudentAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -24,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         mStudentList.add( Student("김미나",1984))
         mStudentList.add( Student("한인택",1991))
 
+        mAdpter = StudentAdapter(this, R.layout.student_list_item, mStudentList)
+
+        viewBind.studentListView.adapter = mAdpter
 
     }
 }
