@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.n2isys.listview_dal.R
 import com.n2isys.listview_dal.datas.Student
 
@@ -23,6 +24,14 @@ class StudentAdapter(
         }
         val row = tempRow!!
 
+        val studentData = mList[position]
+
+        val nameTxt = row.findViewById<TextView>(R.id.nameText)
+        val birthYearTxt = row.findViewById<TextView>(R.id.birthYearText)
+
+        nameTxt.text = studentData.name
+        val koreaAge = 2021- studentData.birthYear +1
+        birthYearTxt.text = "( ${koreaAge} 세)"
         return row
     }
 
